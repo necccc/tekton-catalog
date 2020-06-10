@@ -15,7 +15,7 @@
 
   The task may rely on the following kubernetes resources to be defined:
 
-* **Secret cd-secret**
+* **Secret secure-properties**
 
   Secret containing:
   * **API_KEY**: An [IBM Cloud Api Key](https://cloud.ibm.com/iam/apikeys) used to access IBM Cloud Kubernetes Service. Note: secret name and secret key can be configured using Task's params.
@@ -31,7 +31,7 @@
 * **cluster-name**: (optional) the name of the cluster - required if no cluster pipeline resource provided to this task
 * **cluster-pipeline-resources-directory-fallback**: (optional) that will be used as a fallback mechanism to store the kubeconfig file for the target cluster (expressed by the inputs)
 * **pipeline-debug**: (optional) turn on task script context debugging
-* **continuous-delivery-context-secret**: (optional) name of the secret containing the continuous delivery pipeline context secret (default to `cd-secret`)
+* **continuous-delivery-context-secret**: (optional) name of the secret containing the continuous delivery pipeline context secret (default to `secure-properties`)
 * **kubernetes-service-apikey-secret-key**: (optional) field in the secret that contains the api key used to login to ibmcloud (default to `API_KEY`)
 
 ### Workspaces
@@ -54,7 +54,7 @@
 
   The task expects the following kubernetes resources to be defined:
 
-* **Secret cd-secret**
+* **Secret secure-properties**
 
   Secret containing:
   * **API_KEY**: An IBM Cloud Api Key use to access to the IBM Cloud Container registry service (https://cloud.ibm.com/iam/apikeys)
